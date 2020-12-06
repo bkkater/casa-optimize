@@ -15,8 +15,9 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-6CBAD9?style=for-the-badge">
 </p>
 
+Aplicativo que utiliza inteligência artificial proporcionando uma experiência personalizada ao consumidor, auxiliando na tomada de decisão durante a hora de comprar móveis ou itens de decoração para sua casa e disponibilizando um catálogo de produtos.
+
 <div align="center">
- 
   <sub>Built by
     <a href="https://github.com/Casa-Optmize">Casa Optmize</a>
   </sub>
