@@ -81,7 +81,6 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 # Clone o Repositório
 $ git clone https://github.com/bkkater/casa-optimize.git
 ```
-Acesse a API: http://localhost:3333/
 
 ### 📱 Run Mobile Project
 Para rodar o projeto mobile você precisa de um celular com o [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) instlado ou um emulador android/ios.
