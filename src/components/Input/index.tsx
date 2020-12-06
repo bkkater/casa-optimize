@@ -1,4 +1,3 @@
-import { useIsFocused } from '@react-navigation/native';
 import * as React from 'react';
 import { useState } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
@@ -10,7 +9,8 @@ interface InputProps {
     keyboardtype: string,
     maxlength: number,
     style?: StyleProp<ViewStyle>
-    mockValue?: string
+    mockValue?: string,
+    value?: number | string
 }
 
 const Input: React.FC<InputProps> = ({ label, mockValue, type, keyboardtype, maxlength, style }, props) => {
