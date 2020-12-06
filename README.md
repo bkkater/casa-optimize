@@ -27,6 +27,7 @@ Aplicativo que utiliza inteligência artificial proporcionando uma experiência 
 
 * [Tecnologias](#computer-tecnologias)
 * [Funcionalidades](#rocket-funcionalidades)
+* [Repositórios](#computer-Repositórios)
 * [Como rodar](#construction_worker-como-rodar)
 * [Equipe](#equipe)
 * [License](#closed_book-license)
@@ -69,6 +70,11 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 - A Inteligência artificial identifica o perfil do cliente de acordo com: Dados de Clientes X Dados de Interesses X Dados Comportamentais. E Faz recomendações de produtos que atendem o interesse do usuário.
 
 - Tecnologia 3D com experiência “LEGO” onde o cliente pode montar seu ambiente em tempo real pelo aplicativo criando um melhor contexto possível dentro de sua realidade de estilo-financeira.
+
+
+# :computer: Repositórios
+-   [IA](https://github.com/Casa-Optmize/CO_IA)
+-   [API](https://github.com/Casa-Optmize/api)
 
 # :construction_worker: Como rodar
 ```bash
