@@ -41,12 +41,6 @@
     </a>
 </p>
 
-### Web Screenshot
-<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-   <img src="./.github/mockup-mac.png" width="400px">
-   <img src="./.github/alt-mockup-mac.png" width="400px">
-</div>
-
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
    <img src="./.github/mockup-iphone.png" width="180">
