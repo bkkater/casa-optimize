@@ -75,7 +75,7 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 <details>
   <summary>IA</summary>
 
--   [Escreva aqui](https://pt-br.reactjs.org/)
+-   [Phython](https://www.python.org/)
 
 </details>
 
