@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import {Item, Picker, Icon} from 'native-base';
-import PropTypes from 'prop-types';
 
 // Styles
 import styles from './styles';
 import { View } from 'react-native';
 
 interface SelectProps {
-    size?: string,
-  selectedValue: boolean,
-  onValueChange(): void,
+  size?: string,
+  selectedValue: string,
+  onValueChange(value: string): void,
   items: string[]
 }
 
@@ -22,7 +21,6 @@ const Select: React.FC<SelectProps> = ({
     return (
   <View>
     <Item
-      style={[]}
       regular>
       <Picker
         note
