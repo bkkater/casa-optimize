@@ -1,5 +1,4 @@
 import { useNavigation } from "@react-navigation/native";
-import { Container, Header, Content, Picker, Form } from "native-base";
 import React, { useState } from "react";
 import ProductStep from "..";
 import Select from "../../../components/Select";
@@ -24,7 +23,7 @@ const LookingForProduct: React.FC = () => {
     handleNextSection={() => navigate("MaxValue")}
     nextSectionButtonLabel="Qual valor que deseja investir?"
   >
-    {/* <Select selectedValue={false} onValueChange={onValueChange} items={options}/> */}
+    <Select selectedValue={selectedItem} onValueChange={(value: string) => onValueChange(value)} items={options}/>
   </ProductStep>
   );
 };
