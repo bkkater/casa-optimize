@@ -28,7 +28,11 @@ Aplicativo que utiliza inteligência artificial proporcionando uma experiência 
 * [Tecnologias](#computer-tecnologias)
 * [Funcionalidades](#rocket-funcionalidades)
 * [Como rodar](#construction_worker-como-rodar)
+* [Equipe](#equipe)
 * [License](#closed_book-license)
+* [Equipe](#bulb-Equipe)
+
+
 
 ## 📥 Layout disponivel em:  
 <p align="center">
@@ -60,27 +64,6 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 </details>
 
-<details>
-  <summary>API</summary>
-
--   [Node.js](https://nodejs.org/)
--   [Express](https://expressjs.com/)
--   [Typescript](https://www.typescriptlang.org/)
--   [TS-Node-Dev](https://www.npmjs.com/package/ts-node-dev)
--   [Cors](https://www.npmjs.com/package/cors)
--   [VS Code](https://code.visualstudio.com/)
-
-</details>
-
-<details>
-  <summary>IA</summary>
-
--   [Phython](https://www.python.org/)
-
-</details>
-
-
-
 # :rocket: Funcionalidades
 
 - A Inteligência artificial identifica o perfil do cliente de acordo com: Dados de Clientes X Dados de Interesses X Dados Comportamentais. E Faz recomendações de produtos que atendem o interesse do usuário.
@@ -92,30 +75,27 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 # Clone o Repositório
 $ git clone https://github.com/bkkater/casa-optimize.git
 ```
-### 📦 Rode a API
-
-```bash
-# Vá para a pasta do servidor
-$ cd casa-optimize/server
-# Instale as depedencias
-$ yarn install
-# Rode a aplicação
-$ yarn dev
-```
 Acesse a API: http://localhost:3333/
 
 ### 📱 Run Mobile Project
 Para rodar o projeto mobile você precisa de um celular com o [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) instlado ou um emulador android/ios.
 
 ```bash
-# Vá para a pasta mobile
-$ cd casa-optimize/mobile
+# Vá para a pasta casa-optimize
+$ cd casa-optimize
 # Instale as depedencias
 $ yarn install
 # Rode a aplicação
 $ yarn start
 ```
 Depois leia o QRCode com o app do [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) ou rode em um emulador.
+
+# :bulb: Equipe
+- [Bianca](https://github.com/bkkater)
+- [Paulo](https://www.linkedin.com/in/paulodocarmo/)
+- [Gabriel](https://www.linkedin.com/in/dev-gabriel-mendes/)
+- [Rafael](https://www.linkedin.com/in/rafaelbo/)
+- [Thayná](https://www.linkedin.com/in/thaina-monteiro/)
 
 # :closed_book: LICENSE
 
