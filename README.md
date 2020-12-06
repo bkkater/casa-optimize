@@ -25,7 +25,6 @@ Aplicativo que utiliza inteligência artificial proporcionando uma experiência 
 
 # :pushpin: Tabela de Conteúdo
 
-* [Site de Demostração](#eyes-site-de-demostração) 
 * [Tecnologias](#computer-tecnologias)
 * [Funcionalidades](#rocket-funcionalidades)
 * [Como rodar](#construction_worker-como-rodar)
@@ -40,8 +39,7 @@ Aplicativo que utiliza inteligência artificial proporcionando uma experiência 
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="./.github/mockup-iphone.png" width="180">
-   <img src="./.github/alt-mockup-iphone.png" width="180">
+   <img src="./.github/mockup.png" width="180">
 </div>
 
 
@@ -85,8 +83,9 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 # :rocket: Funcionalidades
 
-* TEXTO
-* TEXTO
+- A Inteligência artificial identifica o perfil do cliente de acordo com: Dados de Clientes X Dados de Interesses X Dados Comportamentais. E Faz recomendações de produtos que atendem o interesse do usuário.
+
+- Tecnologia 3D com experiência “LEGO” onde o cliente pode montar seu ambiente em tempo real pelo aplicativo criando um melhor contexto possível dentro de sua realidade de estilo-financeira.
 
 # :construction_worker: Como rodar
 ```bash
