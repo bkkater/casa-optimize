@@ -1,5 +1,5 @@
-import { useNavigation, useTheme } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
 import { TouchableHighlight, Text, View } from "react-native";
 
 import ProductStep from "..";
@@ -8,10 +8,6 @@ import MoneyInput from "../../../components/MoneyInput";
 const MaxValue: React.FC = (props) => {
   const { navigate } = useNavigation();
   const [advanced, setAdvanced] = useState("0");
-
-  function handleChangeText(numbertext: string) {
-    
-  }
 
   return (
     <ProductStep
@@ -35,16 +31,18 @@ const MaxValue: React.FC = (props) => {
             marginRight: 15,
           }}
           onPress={() => {
+            let moneyValue = parseFloat(advanced.substring(2).replace(',', '.'));
+            let moneyString = '';
             
-            let moneyValue = parseFloat(advanced);
-            console.log(moneyValue)
+            moneyValue = moneyValue > 100 ? parseFloat((moneyValue - 100).toFixed(2)) : 0;
 
-            moneyValue = moneyValue > 100 ? moneyValue - 100 : 0
+            if(moneyValue.toString().includes('.')) {
+              moneyString = `R$${moneyValue}`.replace('.', ',');
+            }else{
+              moneyString = `R$${moneyValue},00`;
+            }
 
-            
-            
-
-            setAdvanced(moneyValue.toString())
+            setAdvanced(moneyString);
           }}
         >
           <Text
@@ -68,8 +66,18 @@ const MaxValue: React.FC = (props) => {
             marginLeft: 15,
           }}
           onPress={() => {
-            let moneyValue = parseInt(advanced.substring(2, advanced.length - 3));
+            let moneyValue = parseFloat(advanced.substring(2).replace(',', '.'));
+            let moneyString = '';
             
+            moneyValue = parseFloat((moneyValue + 100).toFixed(2))
+
+            if(moneyValue.toString().includes('.')) {
+              moneyString = `R$${moneyValue}`.replace('.', ',');
+            }else{
+              moneyString = `R$${moneyValue},00`;
+            }
+
+            setAdvanced(moneyString);
           }}
         >
           <Text
