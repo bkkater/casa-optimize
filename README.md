@@ -6,10 +6,10 @@
   
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/bkkater/casa-optimize?color=6CBAD9&style=for-the-badge">
 
-  <a aria-label="Completed" href="https://www.codestage.com.br/">
+  <a aria-label="Completed" href="https://hackathon.polinize.com/">
     <img src="https://img.shields.io/badge/Hackathon -Polinize-6CBAD9?style=for-the-badge"></img>
   </a>
-  <a href="https://github.com/bkkater/happy/commits/master">
+  <a href="https://github.com/bkkater/casa-optimize/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bkkater/casa-optimize?color=6CBAD9&style=for-the-badge">
   </a> 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-6CBAD9?style=for-the-badge">
