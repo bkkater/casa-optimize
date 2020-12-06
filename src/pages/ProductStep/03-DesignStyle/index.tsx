@@ -21,7 +21,7 @@ const DesignStyle: React.FC = () => {
     <ProductStep
       label="Estilo de design"
       description="Qual o seu estilo preferido?"
-      handleNextSection={() => {}}
+      handleNextSection={() => navigate('Home')}
       nextSectionButtonLabel="Ir para loja"
     >
       <RadioButton.Group

@@ -3,17 +3,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Landing from '../pages/Landing';
-import RegisterStep from '../pages/RegisterStep';
 import Name from '../pages/RegisterStep/01-Name';
 import Email from '../pages/RegisterStep/02-Email';
 import Password from '../pages/RegisterStep/03-Password';
 import Age from '../pages/RegisterStep/05-Age';
 import Cep from '../pages/RegisterStep/04-Cep';
 import MaritalStatus from '../pages/RegisterStep/06-MaritalStatus';
-import ProductStep from '../pages/ProductStep';
 import LookingForProduct from '../pages/ProductStep/01-LookingForProduct';
 import MaxValue from '../pages/ProductStep/02-MaxValue';
 import DesignStyle from '../pages/ProductStep/03-DesignStyle';
+import Home from '../pages/Home';
+import LookingForProductv2 from '../pages/ProductStep/01-LookingForProduct-v2';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -33,8 +33,12 @@ function AppStack() {
 
                 {/*Product Step*/}
                 <Screen name="LookingForProduct" component={LookingForProduct} />
+                <Screen name="LookingForProductv2" component={LookingForProductv2} />
                 <Screen name="MaxValue" component={MaxValue} />
                 <Screen name="DesignStyle" component={DesignStyle} />
+
+                <Screen name='Home' component={Home} />
+
 
             </Navigator>
         </NavigationContainer>
