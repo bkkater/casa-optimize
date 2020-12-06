@@ -7,7 +7,6 @@ import {
   ScrollView,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Row, Col } from "fluid-react";
 
 import background from "../../../assets/background-3.png";
 import PrimaryButton from "../../components/PrimaryButton";
@@ -15,6 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import { products } from "../../utils/ProductList";
 import ProductCard from "../../components/ProductCard";
 import HomeHeader from "../../components/HomeHeader";
+import { Row } from 'react-native-easy-grid';
 
 const Home: React.FC = () => {
   const { navigate } = useNavigation();
@@ -61,20 +61,54 @@ const Home: React.FC = () => {
           alignItems: "center",
         }}
       >
+
         <Row>
-          {products.chairs.map((product) => {
-            return (
-              <Col md="6">
-                <ProductCard
-                  image={product.image}
-                  key={product.id}
-                  name={product.name}
-                  price={product.price}
-                />
-              </Col>
-            );
-          })}
+          <ProductCard
+            image={products.chairs[0].image}
+            key={products.chairs[0].id}
+            name={products.chairs[0].name}
+            price={products.chairs[0].price}
+          />
+          <ProductCard
+            image={products.chairs[1].image}
+            key={products.chairs[1].id}
+            name={products.chairs[1].name}
+            price={products.chairs[1].price}
+          />
         </Row>
+
+        <Row>
+          <ProductCard
+            image={products.chairs[2].image}
+            key={products.chairs[2].id}
+            name={products.chairs[2].name}
+            price={products.chairs[2].price}
+          />
+
+          <ProductCard
+            image={products.chairs[3].image}
+            key={products.chairs[3].id}
+            name={products.chairs[3].name}
+            price={products.chairs[3].price}
+          />
+        </Row> 
+
+        <Row>
+          <ProductCard
+            image={products.chairs[4].image}
+            key={products.chairs[4].id}
+            name={products.chairs[4].name}
+            price={products.chairs[4].price}
+          />
+
+          <ProductCard
+            image={products.chairs[5].image}
+            key={products.chairs[5].id}
+            name={products.chairs[5].name}
+            price={products.chairs[5].price}
+          />
+        </Row>
+        
       </View>
 
       <ImageBackground
