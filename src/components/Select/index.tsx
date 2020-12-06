@@ -1,48 +1,43 @@
-import React, { useState } from 'react';
-import {Item, Picker, Icon} from 'native-base';
+import React, { useState } from "react";
+import Select2 from "react-native-select-two";
 
 // Styles
-import styles from './styles';
-import { View } from 'react-native';
+import { View } from "react-native";
+
+interface DataArray {
+  id: string;
+  name: string;
+}
 
 interface SelectProps {
-  size?: string,
-  selectedValue: string,
-  onValueChange(value: string): void,
-  items: string[]
+  data: DataArray[];
 }
 
-const Select: React.FC<SelectProps> = ({
-  size,
-  selectedValue,
-  onValueChange,
-  items,
-}) => {
-    return (
-  <View>
-    <Item
-      regular>
-      <Picker
-        note
-        mode="dropdown"
-        textStyle={
-          size === 'medium' ? styles.mediumPicker : styles.defaultPicker
-        }
-        itemTextStyle={styles.defaultPicker}
-        enabled
-        headerBackButtonText="Voltar"
-        iosIcon={<Icon name="arrow-down" />}
-        selectedValue={selectedValue}
-        onValueChange={onValueChange}>
-        <Picker.Item label="Selecione uma opção" value={null} />
+const mockData = [
+  { id: 1, name: "React Native Developer" },
+  { id: 2, name: "Android Developer" },
+  { id: 3, name: "iOS Developer" },
+];
 
-        {items.map(item => (
-          <Picker.Item label={item} value={item} />
-        ))}
-      </Picker>
-    </Item>
-  </View>
-    )
-}
+const Select: React.FC<SelectProps> = ({ data }) => {
+  const [dataValue, setDataValue] = useState();
+
+  return (
+    <Select2
+      isSelectSingle={false}
+      style={{ borderRadius: 5 }}
+      colorTheme="blue"
+      popupTitle="Select item"
+      title="Select item"
+      data={mockData}
+      onSelect={(data) => {
+        setDataValue({ data });
+      }}
+      onRemoveItem={(data) => {
+        setDataValue({ data });
+      }}
+    />
+  );
+};
 
 export default Select;
