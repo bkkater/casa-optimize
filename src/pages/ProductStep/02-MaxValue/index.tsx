@@ -31,16 +31,8 @@ const MaxValue: React.FC = (props) => {
             marginRight: 15,
           }}
           onPress={() => {
-            let moneyValue = parseFloat(advanced.substring(2).replace(',', '.'));
-            let moneyString = '';
-            
-            moneyValue = moneyValue > 100 ? parseFloat((moneyValue - 100).toFixed(2)) : 0;
-
-            if(moneyValue.toString().includes('.')) {
-              moneyString = `R$${moneyValue}`.replace('.', ',');
-            }else{
-              moneyString = `R$${moneyValue},00`;
-            }
+            const moneyValue = parseFloat(advanced.substring(2).replace(',', '').replace('.', ''));
+            const moneyString = moneyValue > 10000 ? `R$${((moneyValue - 10000)/100).toFixed(2)}` : `R$0,00`;
 
             setAdvanced(moneyString);
           }}
@@ -66,16 +58,8 @@ const MaxValue: React.FC = (props) => {
             marginLeft: 15,
           }}
           onPress={() => {
-            let moneyValue = parseFloat(advanced.substring(2).replace(',', '.'));
-            let moneyString = '';
-            
-            moneyValue = parseFloat((moneyValue + 100).toFixed(2))
-
-            if(moneyValue.toString().includes('.')) {
-              moneyString = `R$${moneyValue}`.replace('.', ',');
-            }else{
-              moneyString = `R$${moneyValue},00`;
-            }
+            const moneyValue = parseFloat(advanced.substring(2).replace(',', '').replace('.', ''));
+            const moneyString = `R$${((moneyValue + 10000)/100).toFixed(2)}`;
 
             setAdvanced(moneyString);
           }}
