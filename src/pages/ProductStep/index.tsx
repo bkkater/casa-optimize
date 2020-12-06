@@ -11,8 +11,8 @@ import PrimaryButton from "../../components/PrimaryButton";
 interface ProductStepProps {
   handleNextSection(): void;
   label: string;
-  nextSectionButtonLabel: string,
-  description: string
+  nextSectionButtonLabel: string;
+  description: string;
 }
 
 const ProductStep: React.FC<ProductStepProps> = ({
@@ -20,7 +20,7 @@ const ProductStep: React.FC<ProductStepProps> = ({
   label,
   description,
   nextSectionButtonLabel,
-  children
+  children,
 }) => {
   const navigation = useNavigation();
 
@@ -53,12 +53,15 @@ const ProductStep: React.FC<ProductStepProps> = ({
         >
           {description}
         </Text>
+
+        <View style={{ marginTop: 30 }}>{children}</View>
       </View>
 
-      {children}
-
       <View style={{ flexDirection: "row", marginBottom: 20 }}>
-        <PrimaryButton onPress={handleNextSection} label={nextSectionButtonLabel}/>
+        <PrimaryButton
+          onPress={handleNextSection}
+          label={nextSectionButtonLabel}
+        />
       </View>
     </View>
   );

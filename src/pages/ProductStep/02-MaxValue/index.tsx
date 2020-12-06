@@ -1,16 +1,14 @@
 import { useNavigation, useTheme } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { TouchableHighlight, Text, View } from "react-native";
-import { TextInput } from "react-native-paper";
 
 import ProductStep from "..";
+import MoneyInput from "../../../components/MoneyInput";
 
 const MaxValue: React.FC = (props) => {
   const { navigate } = useNavigation();
-  const [money, setMoney] = useState(0);
-  const [value, setValue] = useState(`R$ ${money},00`);
-  const { colors } = useTheme();
-  
+  const [advanced, setAdvanced] = useState("0");
+
   function handleChangeText(numbertext: string) {
     
   }
@@ -25,8 +23,7 @@ const MaxValue: React.FC = (props) => {
       <View
         style={{
           display: "flex",
-          flex: 1,
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "center",
           flexDirection: "row",
         }}
@@ -38,8 +35,16 @@ const MaxValue: React.FC = (props) => {
             marginRight: 15,
           }}
           onPress={() => {
-            money !== 0 && setMoney(money - 1)
-            setValue(`R$ ${money},00`)
+            
+            let moneyValue = parseFloat(advanced);
+            console.log(moneyValue)
+
+            moneyValue = moneyValue > 100 ? moneyValue - 100 : 0
+
+            
+            
+
+            setAdvanced(moneyValue.toString())
           }}
         >
           <Text
@@ -54,19 +59,7 @@ const MaxValue: React.FC = (props) => {
           </Text>
         </TouchableHighlight>
         
-        <TextInput
-            {...props}
-            label=""
-            value={value}
-            onChangeText={(numbertext) => handleChangeText(numbertext)}
-            style={[{ backgroundColor: "transparent", marginBottom: 20, width: '30%' }]}
-            underlineColor={'#262626'}
-            keyboardType="number-pad"
-            selectionColor={"#262626"}
-            theme={{colors: {
-                primary: "#262626"
-            }}}
-        />
+        <MoneyInput advanced={advanced} setAdvanced={setAdvanced}/>
 
         <TouchableHighlight
           style={{
@@ -74,9 +67,9 @@ const MaxValue: React.FC = (props) => {
             borderRadius: 100,
             marginLeft: 15,
           }}
-          onPress={() => { 
-            setMoney(money + 1)
-            setValue(`R$ ${money},00`)
+          onPress={() => {
+            let moneyValue = parseInt(advanced.substring(2, advanced.length - 3));
+            
           }}
         >
           <Text
