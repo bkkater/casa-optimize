@@ -96,7 +96,7 @@ $ git clone https://github.com/bkkater/casa-optimize.git
 
 ```bash
 # Vá para a pasta do servidor
-$ cd ADSSSSSSSSSSSSSSSSSSSSSS/server
+$ cd casa-optimize/server
 # Instale as depedencias
 $ yarn install
 # Rode a aplicação
