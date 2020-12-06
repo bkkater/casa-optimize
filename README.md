@@ -15,9 +15,8 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-6CBAD9?style=for-the-badge">
 </p>
 
-:rocket: Projeto construído durante o Hackathon da [Polinize](https://hackathon.polinize.com/).
-
 <div align="center">
+ 
   <sub>Built by
     <a href="https://github.com/Casa-Optmize">Casa Optmize</a>
   </sub>
@@ -33,11 +32,8 @@
 
 ## 📥 Layout disponivel em:  
 <p align="center">
-    <a title=".fig Web" href="https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web/duplicate">
-        <img alt="Figma" src="https://img.shields.io/badge/Happy Web-black?style=flat-square&logo=figma&logoColor=red" width="200px" />
-    </a>
-    <a title=".fig Mobile" href="https://www.figma.com/file/X27FfVxAgy9f5IFa7ONlph/Happy-Mobile/duplicate">
-        <img alt="Figma" src="https://img.shields.io/badge/Happy Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
+    <a title=".fig Mobile" href="https://www.figma.com/file/COuTfekgKpb2bBdkCH9gVe/Casa-Optimize?node-id=0%3A1">
+        <img alt="Figma" src="https://img.shields.io/badge/Versão Mobile-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
     </a>
 </p>
 
@@ -47,11 +43,6 @@
    <img src="./.github/alt-mockup-iphone.png" width="180">
 </div>
 
-<p align="center">
-  <a href="https://app.netlify.com/" target="_blank">
-    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
-  </a>
-</p>
 
 # :computer: Tecnologias
 Esse projeto foi feito utilizando as seguintes tecnologias:
