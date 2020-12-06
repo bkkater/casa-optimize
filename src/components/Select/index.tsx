@@ -1,41 +1,36 @@
 import React, { useState } from "react";
 import Select2 from "react-native-select-two";
 
-// Styles
-import { View } from "react-native";
-
-interface DataArray {
-  id: string;
-  name: string;
-}
-
-interface SelectProps {
-  data: DataArray[];
-}
-
 const mockData = [
-  { id: 1, name: "React Native Developer" },
-  { id: 2, name: "Android Developer" },
-  { id: 3, name: "iOS Developer" },
-];
+    { id: 1, name: "Sofá" },
+    { id: 2, name: "Cadeira" },
+    { id: 3, name: "Mesa de Jantar" },
+    { id: 4, name: "Mesa de Canto" },
+    { id: 5, name: "Escrivaninha" },
+    { id: 6, name: "Mesa de Cabeceira"},
+    { id: 7, name: "Rack" },
+  ];
 
-const Select: React.FC<SelectProps> = ({ data }) => {
-  const [dataValue, setDataValue] = useState();
+const Select: React.FC = () => {
+  const [dataValue, setDataValue] = useState<number[]>([])
 
   return (
     <Select2
       isSelectSingle={false}
-      style={{ borderRadius: 5 }}
-      colorTheme="blue"
-      popupTitle="Select item"
-      title="Select item"
+      style={{ borderRadius: 5, position: "relative", top: -200}}
+      colorTheme="gray"
+      popupTitle="Escolha os produtos desejados"
+      title="Selecione"
       data={mockData}
-      onSelect={(data) => {
-        setDataValue({ data });
+      onSelect={(data: number[]) => {
+        setDataValue(data);
       }}
-      onRemoveItem={(data) => {
-        setDataValue({ data });
+      onRemoveItem={(data: number[]) => {
+        setDataValue(data);
       }}
+      selectButtonText="Selecionar"
+      cancelButtonText="Voltar"
+      searchPlaceHolderText="Pesquisar"
     />
   );
 };
