@@ -39,7 +39,7 @@ Aplicativo que utiliza inteligência artificial proporcionando uma experiência 
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="./.github/mockup.png" width="180">
+   <img src="./.github/mockup.png" width="360">
 </div>
 
 
