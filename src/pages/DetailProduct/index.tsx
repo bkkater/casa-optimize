@@ -16,8 +16,41 @@ import DetailProductHeader from "../../components/DetailProductHeader";
 import detail_image from "../../../assets/Products/chair-detail.png";
 import image from "../../../assets/Products/image.png";
 
+import chair01 from '../../../assets/Products/chair-01G.png';
+import chair02 from '../../../assets/Products/chair-02G.png';
+import chair03 from '../../../assets/Products/chair-03G.png';
+import chair04 from '../../../assets/Products/chair-04G.png';
+import chair05 from '../../../assets/Products/chair-05G.png';
+import chair06 from '../../../assets/Products/chair-06G.png';
 
 import style from "./styles";
+
+const images = [
+  {
+    id: 0,
+    image: chair01
+  },
+  {
+    id: 1,
+    image: chair02
+  },
+  {
+    id: 2,
+    image: chair03
+  },
+  {
+    id: 3,
+    image: chair04
+  },
+  {
+    id: 4,
+    image: chair05
+  },
+  {
+    id: 5,
+    image: chair06
+  }
+]
 
 interface DetailProductProps {
   readonly route: {
@@ -33,7 +66,7 @@ const DetailProduct: React.FC<DetailProductProps> = ({ route }) => {
   return (
     <ScrollView>
       <ImageBackground
-        source={image}
+        source={images[product.id].image}
         style={{
           width: "100%",
           height: 365,
