@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TouchableHighlight,
-  ImageBackground,
+  Image,
   ScrollView,
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
@@ -55,10 +55,10 @@ const Home: React.FC = () => {
 
       <View
         style={{
-          flexWrap: "wrap",
           marginTop: 20,
           justifyContent: "space-between",
           alignItems: "center",
+          flex: 1,
         }}
       >
 
@@ -68,12 +68,14 @@ const Home: React.FC = () => {
             key={products.chairs[0].id}
             name={products.chairs[0].name}
             price={products.chairs[0].price}
+            id={products.chairs[0].id}
           />
           <ProductCard
             image={products.chairs[1].image}
             key={products.chairs[1].id}
             name={products.chairs[1].name}
             price={products.chairs[1].price}
+            id={products.chairs[1].id}
           />
         </Row>
 
@@ -83,6 +85,7 @@ const Home: React.FC = () => {
             key={products.chairs[2].id}
             name={products.chairs[2].name}
             price={products.chairs[2].price}
+            id={products.chairs[2].id}
           />
 
           <ProductCard
@@ -90,6 +93,7 @@ const Home: React.FC = () => {
             key={products.chairs[3].id}
             name={products.chairs[3].name}
             price={products.chairs[3].price}
+            id={products.chairs[3].id}
           />
         </Row> 
 
@@ -99,24 +103,25 @@ const Home: React.FC = () => {
             key={products.chairs[4].id}
             name={products.chairs[4].name}
             price={products.chairs[4].price}
+            id={products.chairs[4].id}
           />
-
           <ProductCard
             image={products.chairs[5].image}
             key={products.chairs[5].id}
             name={products.chairs[5].name}
             price={products.chairs[5].price}
+            id={products.chairs[5].id}
           />
         </Row>
         
       </View>
 
-      <ImageBackground
+      <Image
         source={background}
-        style={{ width: 335, height: 189 }}
+        style={{ width: 335, height: 189, marginVertical: 40 }}
       />
 
-      <View style={{ flexDirection: "row", marginVertical: 20 }}>
+      <View style={{ flexDirection: "row", marginVertical: 20, paddingBottom: 100 }}>
         <PrimaryButton
           onPress={() => navigate("LookingForProductv2")}
           label={"Preencher novamente"}

@@ -9,37 +9,37 @@ import chair06 from '../../../assets/Products/chair-06.png';
 export const products = {
   chairs: [
     {
-      id: 1,
+      id: 0,
       name: "Cadeira Magnus",
       price: "199,99",
       image: chair01,
     },
     {
-      id: 2,
+      id: 1,
       name: "Cadeira Prime",
       price: "159,50",
       image: chair02,
     },
     {
-      id: 3,
+      id: 2,
       name: "Cadeira Top",
       price: "189,49",
       image: chair03,
     },
     {
-      id: 4,
+      id: 3,
       name: "Cadeira Fusion",
       price: "179,90",
       image: chair04,
     },
     {
-      id: 5,
+      id: 4,
       name: "Cadeira Super",
       price: "150,90",
       image: chair05,
     },
     {
-      id: 6,
+      id: 5,
       name: "Cadeira do Lar",
       price: "189,99",
       image: chair06,

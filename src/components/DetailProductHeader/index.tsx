@@ -1,15 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableHighlight } from "react-native";
 import { MaterialCommunityIcons, Feather } from "@expo/vector-icons";
 
-import logo from "../../../assets/logoonlyimage.png";
+import { useNavigation } from "@react-navigation/native";
 
 const DetailProductHeader: React.FC = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
-        backgroundColor: "#FFF",
         justifyContent: "space-between",
+        paddingHorizontal: 20
       }}
     >
       <View
@@ -18,8 +19,9 @@ const DetailProductHeader: React.FC = () => {
           justifyContent: "space-between",
           alignItems: "center",
         }}
-      >
-        <View style={{ alignItems: "center" }}>
+      > 
+      <TouchableHighlight onPress={() => navigation.goBack()} underlayColor="transparent">
+        <View style={{ alignItems: "center", flexDirection: "row" }}>
           <Feather name="chevron-left" size={28} color="black" />
           <Text
             style={{
@@ -31,6 +33,7 @@ const DetailProductHeader: React.FC = () => {
             Voltar
           </Text>
         </View>
+      </TouchableHighlight>
 
         <View
           style={{

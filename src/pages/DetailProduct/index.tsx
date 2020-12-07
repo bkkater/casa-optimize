@@ -5,6 +5,7 @@ import {
   Text,
   Image,
   TouchableHighlight,
+  ScrollView,
 } from "react-native";
 import { RectButton } from "react-native-gesture-handler";
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
@@ -13,6 +14,8 @@ import { Product } from "../../@types/app";
 import DetailProductHeader from "../../components/DetailProductHeader";
 
 import detail_image from "../../../assets/Products/chair-detail.png";
+import image from "../../../assets/Products/image.png";
+
 
 import style from "./styles";
 
@@ -28,90 +31,115 @@ const DetailProduct: React.FC<DetailProductProps> = ({ route }) => {
   const { product } = route.params;
 
   return (
-    <View>
-      {/* <ImageBackground source={} style={{width: "100%", height: 353}}> */}
-      <DetailProductHeader />
-      {/* </ImageBackground> */}
-
-      <Text
+    <ScrollView>
+      <ImageBackground
+        source={image}
         style={{
-          fontFamily: "Ubuntu_600SemiBold",
-          marginTop: 10,
-          fontSize: 18,
-          color: "#A67356",
+          width: "100%",
+          height: 365,
+          flex: 1,
+          position: "relative",
+          bottom: -50
         }}
       >
-        Cadeira do lar
-      </Text>
-      <Text
-        style={{
-          fontFamily: "Ubuntu_400Regular",
-          marginTop: 10,
-          fontSize: 14,
-        }}
-      >
-        Cadeira estilo rústica, confortável e na cor preta e de mandeira
-        proveniente de reflorestamente.
-      </Text>
+        <DetailProductHeader />
+      </ImageBackground>
 
-      <Text
-        style={{
-          justifyContent: "flex-end",
-          marginTop: 15,
-          fontFamily: "Ubuntu_700Bold",
-          fontSize: 20,
-        }}
-      >
-        R$ 189,99
-      </Text>
-
-      <Image source={detail_image} />
-
-      <View style={{ borderTopColor: "#A67356" }}>
-        <View style={{ marginBottom: 50 }}>
-          <RectButton
+      <View style={{ padding: 20, marginTop: 50 }}>
+        <View style={{ paddingHorizontal: 5 }}>
+          <Text
             style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              padding: 20,
+              fontFamily: "Ubuntu_700Bold",
+              marginTop: 10,
+              fontSize: 18,
+              color: "#A67356",
             }}
           >
-            <Text style={{ ...style.contentText, fontWeight: "bold" }}>
-              Colocar no ambiente
-            </Text>
-            <Feather name="move" size={24} color="black" />
-          </RectButton>
-
-          <TouchableHighlight
+            {product.name}
+          </Text>
+          <Text
             style={{
-              padding: 18,
-              backgroundColor: "#A67356",
-              marginTop: 20,
+              fontFamily: "Ubuntu_500Medium",
+              marginTop: 10,
+              fontSize: 16,
             }}
-            underlayColor="#A67356"
           >
-            <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
+            Cadeira confortável, na cor preta e de mandeira proveniente de
+            reflorestamente.
+          </Text>
+
+          <Text
+            style={{
+              justifyContent: "flex-end",
+              marginVertical: 15,
+              fontFamily: "Ubuntu_700Bold",
+              fontSize: 18,
+              marginBottom: 30,
+            }}
+          >
+            R$ {product.price}
+          </Text>
+        </View>
+
+        <View style={{ alignItems: "center" }}>
+          <Image source={detail_image} style={{ alignItems: "center" }} />
+        </View>
+
+        <View
+          style={{
+            borderTopColor: "#A67356",
+            borderTopWidth: 1,
+            marginTop: 40,
+          }}
+        >
+          <View style={{ marginBottom: 50 }}>
+            <RectButton
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                padding: 20,
+              }}
             >
-              <Text
+              <Text style={{ ...style.contentText, fontWeight: "bold" }}>
+                Colocar no ambiente
+              </Text>
+              <Feather name="move" size={24} color="black" />
+            </RectButton>
+
+            <TouchableHighlight
+              style={{
+                padding: 18,
+                backgroundColor: "#A67356",
+                marginTop: 20,
+              }}
+              underlayColor="#A67356"
+            >
+              <View
                 style={{
-                  ...style.contentText,
-                  fontWeight: "bold",
-                  color: "white",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
                 }}
               >
-                Adicionar ao carrinho
-              </Text>
-              <MaterialCommunityIcons
-                name="cart-outline"
-                size={24}
-                color="white"
-              />
-            </View>
-          </TouchableHighlight>
+                <Text
+                  style={{
+                    ...style.contentText,
+                    fontWeight: "bold",
+                    color: "white",
+                  }}
+                >
+                  Adicionar ao carrinho
+                </Text>
+                <MaterialCommunityIcons
+                  name="cart-outline"
+                  size={24}
+                  color="white"
+                />
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -14,6 +14,7 @@ import MaxValue from '../pages/ProductStep/02-MaxValue';
 import DesignStyle from '../pages/ProductStep/03-DesignStyle';
 import Home from '../pages/Home';
 import LookingForProductv2 from '../pages/ProductStep/01-LookingForProduct-v2';
+import DetailProduct from '../pages/DetailProduct';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -39,7 +40,7 @@ function AppStack() {
 
                 <Screen name='Home' component={Home} />
 
-
+                <Screen name='DetailProduct' component={DetailProduct} />
             </Navigator>
         </NavigationContainer>
     )
