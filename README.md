@@ -100,7 +100,7 @@ Depois leia o QRCode com o app do [expo](https://play.google.com/store/apps/deta
 - [Paulo](https://www.linkedin.com/in/paulodocarmo/)
 - [Gabriel](https://www.linkedin.com/in/dev-gabriel-mendes/)
 - [Rafael](https://www.linkedin.com/in/rafaelbo/)
-- [Thayná](https://www.linkedin.com/in/thaina-monteiro/)
+- [Thainá](https://www.linkedin.com/in/thaina-monteiro/)
 
 # :closed_book: LICENSE
 
